@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>memory-game</title>
+  <!-- Polyfills for the Web Component APIs are required to use vaadin-button and other Web Components
+       in the browsers that do not support these APIs natively (e.g. IE11) -->
+  <script src="webcomponentsjs/webcomponents-loader.js"></script>
+  <!-- A polyfill for the `fetch` API is required to use Vaadin Connect
+       in the browsers that do not support this API natively (e.g. IE11) -->
+  <script nomodule src="polyfills.es5.js"></script>
+
+  <link sizes="16x16" rel="shortcut icon" href="icons/favicon.png" type="image/png">
+  <link sizes="16x16" rel="shortcut icon" href="icons/icon-16x16.png" type="image/png">
+  <link sizes="32x32" rel="icon" href="icons/icon-32x32.png" type="image/png">
+  <link sizes="96x96" rel="icon" href="icons/icon-96x96.png" type="image/png">
+  <link sizes="192x192" rel="icon" href="icons/icon-192x192.png" type="image/png">
+  <link sizes="512x512" rel="icon" href="icons/icon-512x512.png" type="image/png">
+  <link sizes="96x96" rel="apple-touch-icon" href="icons/icon-96x96.png" type="image/png">
+  <link sizes="144x144" rel="apple-touch-icon" href="icons/icon-144x144.png" type="image/png">
+  <link sizes="152x152" rel="apple-touch-icon" href="icons/icon-152x152.png" type="image/png">
+  <link sizes="167x167" rel="apple-touch-icon" href="icons/icon-167x167.png" type="image/png">
+  <link sizes="180x180" rel="apple-touch-icon" href="icons/icon-180x180.png" type="image/png">
+  <link sizes="192x192" rel="apple-touch-icon" href="icons/icon-192x192.png" type="image/png">
+  <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+</head>
+<body>
+  <div id="outlet"></div>
+  <!-- index.js is included here automatically (either by the dev server or during the build) -->
+  <memory-game></memory-game>
+</body>
+</html>
