@@ -1,8 +1,0 @@
-import URLSearchParams from 'url-search-params';
-window.URLSearchParams = URLSearchParams;
-
-import 'unfetch/polyfill/index.js';
-import 'abortcontroller-polyfill/dist/polyfill-patch-fetch.js';
-import { shim } from 'array.prototype.find';
-shim();
-import('element-remove');
