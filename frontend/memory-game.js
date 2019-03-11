@@ -60,6 +60,7 @@ class MemoryGame extends LitElement {
     this.images = [...urls, ...urls];
 
     shuffle(this.images);
+    this.findSize();
     this.ongoing = true;
   }
   async reveal(card) {
@@ -89,6 +90,19 @@ class MemoryGame extends LitElement {
   }
   timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  findSize() {
+    if (window.innerWidth == 320) {
+      this.style.setProperty("--cards-horizontally", 4);
+    } else if (window.innerWidth == 568) {
+      this.style.setProperty("--cards-horizontally", 8);
+    } else if (window.innerWidth == 768) {
+      this.style.setProperty("--cards-horizontally", 5);
+    } else if (window.innerWidth == 1024) {
+      this.style.setProperty("--cards-horizontally", 7);
+    } else {
+
+    }
   }
   static get properties() {
     return {
