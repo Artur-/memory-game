@@ -24,7 +24,6 @@ module.exports = (env, argv) => {
     context: path.resolve(__dirname, inputFolder),
 
     entry: {
-      polyfills: './polyfills.js',
       index: './index.js'
     },
 
@@ -154,12 +153,7 @@ module.exports = (env, argv) => {
 
       // Insert the bundles in the html file
       new HtmlWebpackPlugin({
-        template: 'index.html',
-
-        // Prevent adding multiple bunldles for polyfills, browsers that have ES
-        // modules support don’t need them. The polyfills are listed directly in
-        // the html template to ensure correct loading order.
-        excludeChunks: ['polyfills']
+        template: 'index.html'
       }),
 
       // Append Spring Boot LiveReload script in development mode
