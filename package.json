@@ -26,6 +26,7 @@
     "@vaadin/vaadin": "^13.0.0-alpha4",
     "@vaadin/vaadin-login": "^1.0.0-beta1",
     "@webcomponents/webcomponentsjs": "^2.2.1",
+    "a-flippable-card": "^1.0.0",
     "abortcontroller-polyfill": "^1.2.1",
     "array.prototype.find": "^2.0.4",
     "element-remove": "^1.0.4",

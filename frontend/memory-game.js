@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit-element";
-import "flippable-card";
+import "a-flippable-card";
 const shuffle = require("shuffle-array");
 
 class MemoryGame extends LitElement {
@@ -12,7 +12,7 @@ class MemoryGame extends LitElement {
       [hidden] {
         visibility: hidden;
       }
-      flippable-card {
+      a-flippable-card {
         width: var(--card-width);
         height: calc(var(--card-width) * 1.4285714286);
       }
@@ -32,13 +32,13 @@ class MemoryGame extends LitElement {
     return html`
       ${this.images.map(
         image => html`
-          <flippable-card
+          <a-flippable-card
             @click="${e => this.reveal(e.target)}"
             unrevealed
             front="${image}"
             back="https://upload.wikimedia.org/wikipedia/commons/8/87/Card_back_05.svg"
             .hidden="${false}"
-          ></flippable-card>
+          ></a-flippable-card>
         `
       )}
       <img
@@ -118,10 +118,10 @@ class MemoryGame extends LitElement {
     };
   }
   checkIfDone() {
-    if (!this.shadowRoot.querySelector("flippable-card[unrevealed]")) {
+    if (!this.shadowRoot.querySelector("a-flippable-card[unrevealed]")) {
       // All revealed
       this.ongoing = false;
-      window.document.documentElement.scrollTop=0;
+      window.document.documentElement.scrollTop = 0;
       this.shadowRoot.querySelector("#jee").play();
     }
   }
