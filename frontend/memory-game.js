@@ -47,8 +47,8 @@ class MemoryGame extends LitElement {
         @click="${e => this.restart()}"
         .hidden="${this.ongoing}"
       />
-      <audio id="jee">
-        <source src="jee.mp3" type="audio/mpeg">
+      <audio id="alldone">
+        <source src="alldone.mp3" type="audio/mpeg" />
       </audio>
     `;
   }
@@ -122,7 +122,7 @@ class MemoryGame extends LitElement {
       // All revealed
       this.ongoing = false;
       window.document.documentElement.scrollTop = 0;
-      this.shadowRoot.querySelector("#jee").play();
+      this.shadowRoot.querySelector("#alldone").play();
     }
   }
   restart() {
