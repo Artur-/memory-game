@@ -36,7 +36,7 @@ class MemoryGame extends LitElement {
             @click="${e => this.reveal(e.target)}"
             unrevealed
             front="${image}"
-            back="https://upload.wikimedia.org/wikipedia/commons/8/87/Card_back_05.svg"
+            back="images/back.png"
             .hidden="${false}"
           ></a-flippable-card>
         `
