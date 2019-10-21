@@ -95,16 +95,28 @@ class MemoryGame extends LitElement {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   findSize() {
-    if (window.innerWidth == 320) {
-      this.style.setProperty("--cards-horizontally", 4);
-    } else if (window.innerWidth == 568) {
+    const value = window.innerWidth;
+    if (value == 736 || value == 667) {
+      // Iphone
+      this.style.setProperty("--cards-horizontally", 11);
+    } else if (value == 812 || value == 635) {
+      // Iphone X
+      this.style.setProperty("--cards-horizontally", 13);
+    } else if (value == 414 || value == 375) {
+      // Iphone hor
+      this.style.setProperty("--cards-horizontally", 6.5);
+    } else if (value == 375) {
+      // Iphone X hor
+      this.style.setProperty("--cards-horizontally", 5.1);
+    } else if (value <= 568) {
       this.style.setProperty("--cards-horizontally", 8);
-    } else if (window.innerWidth == 768) {
-      this.style.setProperty("--cards-horizontally", 5);
-    } else if (window.innerWidth == 1024) {
-      this.style.setProperty("--cards-horizontally", 7);
+    } else if (value == 768 || value == 665) {
+      // ipad hor
+      this.style.setProperty("--cards-horizontally", 6.5);
+    } else if (value == 1024 || value == 921) {
+      // ipad
+      this.style.setProperty("--cards-horizontally", 9);
     } else {
-
     }
   }
   static get properties() {
