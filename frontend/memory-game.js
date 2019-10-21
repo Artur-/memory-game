@@ -55,8 +55,9 @@ class MemoryGame extends LitElement {
   constructor() {
     super();
 
+    const imageCount = 7;
     const urls = [];
-    for (var i = 1; i <= 10; i++) {
+    for (var i = 1; i <= imageCount; i++) {
       urls.push(`images/${i}.png`);
     }
 
